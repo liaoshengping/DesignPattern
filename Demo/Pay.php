@@ -14,13 +14,11 @@ include ("Loder.php");
 class Pay
 {
     public function paySuccess(){
-        $data =[
-       'order_id'=> 110,
+        $data =['order_id'=> 110,
        'name'=>'廖总',
        'email' =>'1194008361@qq.com',
        'coupon_id'=>250,
-       'money'=>1000000000,
-        ];
+       'money'=>1000000000,];
         $class = new \PayAfter();
         $class->addObj(new Depot());
         $class->addObj(new Email());

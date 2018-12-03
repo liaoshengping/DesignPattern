@@ -10,6 +10,7 @@
  */
 class PayAfter{
     private $objs = array();
+
     function addObj($obj){
         $this->objs[] = $obj;
     }
