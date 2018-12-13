@@ -10,4 +10,4 @@
  */
 include ("Loder.php");
 $class = new UserSystemB();
-//echo $class->getUserOrderInfo()->getOrderInfo();
+echo $class->getUserOrderInfo()->getOrderInfo();
