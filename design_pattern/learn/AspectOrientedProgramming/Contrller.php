@@ -1,7 +1,7 @@
 <?php
 
-namespace app\learn\AspectOrientedProgramming;
 
+include "Loder.php";
 include "../../app.php";
 
 

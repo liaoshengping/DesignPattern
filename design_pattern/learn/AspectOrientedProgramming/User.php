@@ -1,7 +1,5 @@
 <?php
 
-namespace app\learn\AspectOrientedProgramming;
-
 class User{
 	
     public function register($data, $type)
