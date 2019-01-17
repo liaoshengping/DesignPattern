@@ -16,9 +16,6 @@ class Person{
         var_dump($args);
         echo ")不存在！";
     }
-//    public function test($param,$meth){
-//        echo "hello ";
-//    }
 }
 
 $p1=new Person();
