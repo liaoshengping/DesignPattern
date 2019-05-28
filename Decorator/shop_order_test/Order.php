@@ -66,7 +66,7 @@ $post_data = [
 ];
 
 $obj = new Order($post_data);
-$obj->addObj(new \Base());
+$obj->addObj(new \Goods());
 $obj->addObj(new \Coupon());
 $obj->addObj(new \Postage());
 $obj->execute();

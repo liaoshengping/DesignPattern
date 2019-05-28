@@ -3,7 +3,7 @@
  * 优惠券
  */
 
-class Coupon extends Order implements OrderInterface{
+class Coupon implements OrderInterface{
 
     protected $coupon_id = 0;
 
@@ -13,8 +13,8 @@ class Coupon extends Order implements OrderInterface{
         $this->coupon_id = (empty(Order::$post_data['coupon_id'])) ? 0 : Order::$post_data['coupon_id'];
         if($this->coupon_id !=0){
             $this->checkCoupon();
-            self::$price -=5;
-            echo "优惠券活动减去5块".self::$price.PHP_EOL;
+            Order::$price -=5;
+            echo "优惠券活动减去5块,当前价钱：".Order::$price.PHP_EOL;
         }else{
             echo '没有参与优惠券活动'.PHP_EOL;
         }
@@ -26,7 +26,7 @@ class Coupon extends Order implements OrderInterface{
         if($this->coupon_id !=0){
             echo '修改用户优惠券状态'.PHP_EOL;
         }
-        echo self::$price;
+        echo Order::$price;
     }
 
     public function checkCoupon(){

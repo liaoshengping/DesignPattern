@@ -1,7 +1,7 @@
 <?php
 
 
-class Base extends Order implements OrderInterface
+class Goods extends Order implements OrderInterface
 {
 
 
