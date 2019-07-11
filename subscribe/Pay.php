@@ -11,7 +11,7 @@
 
 include ("Loder.php");
 
-class Pay
+class Pay implements OrderNotice
 {
     public function paySuccess(){
         $data =['order_id'=> 110,
@@ -26,6 +26,16 @@ class Pay
         $class->addObj(new Coupon());
         //todo...
         $class->notice($data);
+    }
+
+    /**
+     * @param array $data
+     * @return mixed
+     * @describe: 支付成功后通知的信息操作
+     */
+    public function notice($data = array())
+    {
+        // TODO: Implement notice() method.
     }
 }
 //调用方法
