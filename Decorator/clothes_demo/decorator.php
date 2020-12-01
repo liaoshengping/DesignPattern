@@ -15,7 +15,6 @@ interface IComponent
 class Person implements IComponent
 {
     private $name;
-
     function __construct($name)
     {
         $this->name=$name;
@@ -24,6 +23,14 @@ class Person implements IComponent
     function Display()
     {
         echo "装扮的：{$this->name}<br/>";
+    }
+
+    /**
+     * @param mixed $amount
+     */
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
     }
 }
 
@@ -44,6 +51,7 @@ class Clothes implements IComponent
         if(!empty($this->component))
         {
             $this->component->Display();
+
         }
     }
 
@@ -55,7 +63,7 @@ class PiXie extends Clothes
 {
     function Display()
     {
-        echo "皮鞋  ";
+        echo '皮鞋';
         parent::Display();
     }
 }
@@ -64,7 +72,7 @@ class QiuXie extends Clothes
 {
     function Display()
     {
-        echo "球鞋  ";
+        echo '球鞋';
         parent::Display();
     }
 }

@@ -24,6 +24,7 @@ class otherAgent extends baseAgent {
         return 'not IE';
     }
 }
+
 class Browser { //具体策略角色
     public function call($object) {
         return $object->PrintPage ();
